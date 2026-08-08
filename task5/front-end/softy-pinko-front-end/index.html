@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softy Pinko</title>
+    <!-- jQuery kitabxanası -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Softy Pinko Front-End</h1>
+    <div id="dynamic-content">Yüklənir...</div>
+
+    <!-- Proxy server vasitəsilə back-end-ə sorğu göndərən skript -->
+    <script>
+        // Load dynamic data from the back-end through the proxy server
+        $(function() {
+            $.ajax({
+                type: "GET",
+                url: "/api/hello",
+                success: function (data) {
+                    console.log(data);
+                    $('#dynamic-content').text(data);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
