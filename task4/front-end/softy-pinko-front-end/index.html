@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Softy Pinko - Landing Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
+
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="#" class="logo">
+                            <img src="assets/images/logo.png" alt="Softy Pinko"/>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="#welcome" class="active">Home</a></li>
+                            <li><a href="#features">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#pricing-plans">Pricing Tables</a></li>
+                            <li><a href="#blog">Blog Entries</a></li>
+                            <li><a href="#contact-us">Contact Us</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h1 id="dynamic-content"></h1>
+                        <h1>We provide the best <strong>strategy</strong><br>to grow up your <strong>business</strong></h1>
+                        <p>Softy Pinko is a professional HTML CSS landing page for your company website. Maecenas pellentesque elit massa, vel condimentum erat pellentesque consequat.</p>
+                        <a href="#features" class="main-button-slider">Discover More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">Copyright &copy; 2020 Softy Pinko Company - Design: TemplateMo</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+        // Load dynamic data from the back-end on port 5252
+        $(function() {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:5252/api/hello",
+                success: function(data) {
+                    console.log(data);
+                    $('#dynamic-content').text(data);
+                }
+            });
+        });
+    </script>
+  </body>
+</html>
